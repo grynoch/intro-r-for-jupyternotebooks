@@ -196,12 +196,12 @@ $(document).ready(function () {
 </div>
 
 
-<div id="brief-introduction-to-r-and-rstudio" class="section level2">
+<div id="brief-introduction-to-r" class="section level2">
 <h2>Brief Introduction to R</h2>
 <p>The term “R” is used to refer to both the programming language and the software that interprets the scripts written using it.</p>
 <p>Reasons to use R:</p>
 <ul>
-<li>Easy to reproduce (less pointing and clicking)</li>itt 
+<li>Easy to reproduce (less pointing and clicking)</li>
 <li>Able to analyze data and create visualizations without altering the data we input into our script regardless of the analysis we run</li>
 <li>Analysis and visualization possibilities are limitless and cross disciplinary boundaries</li>
 <li>Works on all types and sizes of data</li>
@@ -217,14 +217,14 @@ $(document).ready(function () {
 <li>Create a new R notebook and rename it using a descriptive file name such as "Intro_R_class_20200311”</li>
 </ul>
 <p>Start by giving our notebook a title using a comment which are denoted by a #</p>
-<pre class="r"><code>#Introduction to R and RStudio Class March, 2020
+<pre class="r"><code>#Introduction to R Tutorial March, 2020
 #Instructor: Tess Grynoch
 #Notes by Name
 
 #Comments allow you to add notes as you write your code</code></pre>
 <div id="math-operations" class="section level3">
 <h3>Math operations</h3>
-<p>R and Rstudio have a number of basic built-in functions and arithmetic that make it an excellent calculator.</p>
+<p>R has a number of basic built-in functions and arithmetic that make it an excellent calculator.</p>
 <table>
 <tbody>
 <tr class="odd">
@@ -341,7 +341,7 @@ print(c('Solution A is',z,'times as strong as solution B'))</code></pre>
 <div id="install-packages-and-add-libraries" class="section level3">
 <h3>Install packages and add libraries</h3>
 <p><strong>Note for RDM 102:</strong> The Tidyverse package has already been installed on the JupyterHub server so we do not need to install it. The following instructions are here for your interest.</p>
-<p>To expand on what is already available through RStudio, we need to install packages. Today we’ll be using tidyverse which is a collection of R packages for data science. For more information on the packages, visit the <a href="https://www.tidyverse.org/">tidyverse website</a>.</p>
+<p>To expand on what is already available through the basic R package, we need to install additional packages. Today we’ll be using tidyverse which is a collection of R libraries for data science. For more information on the Tidyverse package, visit the <a href="https://www.tidyverse.org/">tidyverse website</a>.</p>
 <pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
 <p>Once we install the package, we need to tell it which libraries we will be using</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
@@ -365,13 +365,13 @@ print(c('Solution A is',z,'times as strong as solution B'))</code></pre>
 </div>
 <div id="reading-files-into-r" class="section level3">
 <h3>Reading files into R</h3>
-<p>To use data in R and RStudio we must first read it into the environment and assign it a variable name.</p>
+<p>To use data in out R Notebook we must first read it into the environment and assign it a variable name.</p>
 <pre class="r"><code>sample &lt;- read.csv(&quot;data/sample.csv&quot;)</code></pre>
-<p>I’ve used the relative path to the file above but if I were to use the full destination name it would look something like “C://Users/grynochc/Desktop/Intro-R-class-20191209/Data/sample.csv”   You can read other files into R using similar functions such as:</p>
+<p>I’ve used the relative path to the file above but if I were to use the full destination name it would look something like “C://Users/grynochc/Desktop/Intro-R-class-20191209/Data/sample.csv”</p>
 </div>
 <div id="data-exploration-and-exploratory-statistics" class="section level3">
 <h3>Data exploration and exploratory statistics</h3>
-<p>Once you bring your data into RStudio, one of the first things you should do is get oriented to it. Even if you collected the data yourself or are already familiar with the data in its original format. I recommend running through some basic functions and exploratory statistics to check how the data was imported and ensure that there are no unexpected surprises. You can also view the full table by clicking on the table icon to the right of the data but this is not always useful with large datasets and I also don’t like moving between tabs.</p>
+<p>Once you bring your data into your R Notebook, one of the first things you should do is get oriented to it. Even if you collected the data yourself or are already familiar with the data in its original format. I recommend running through some basic functions and exploratory statistics to check how the data was imported and ensure that there are no unexpected surprises. You can also view the whole dataset by opening the file in JupyterHub but this is not always useful with large datasets and I also don’t like moving between tabs.</p>
 <pre class="r"><code>head(sample)</code></pre>
 <pre><code>##       ID Gender      Group BloodPressure  Age Aneurisms_q1 Aneurisms_q2
 ## 1 Sub001      m    Control           132 16.0          114          140
