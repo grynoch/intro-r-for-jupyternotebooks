@@ -197,13 +197,11 @@ $(document).ready(function () {
 
 
 <div id="brief-introduction-to-r-and-rstudio" class="section level2">
-<h2>Brief Introduction to R and RStudio</h2>
+<h2>Brief Introduction to R</h2>
 <p>The term “R” is used to refer to both the programming language and the software that interprets the scripts written using it.</p>
-<p>RStudio is currently a very popular way to not only write your R scripts but also to interact with the R software. To function correctly, RStudio needs R and therefore both need to be installed on your computer.</p>
-<p>To make it easier to interact with R, we will use RStudio. RStudio is the most popular IDE (Integrated Development Interface) for R. An IDE is a piece of software that provides tools to make programming easier.</p>
 <p>Reasons to use R:</p>
 <ul>
-<li>Easy to reproduce (less pointing and clicking)</li>
+<li>Easy to reproduce (less pointing and clicking)</li>itt 
 <li>Able to analyze data and create visualizations without altering the data we input into our script regardless of the analysis we run</li>
 <li>Analysis and visualization possibilities are limitless and cross disciplinary boundaries</li>
 <li>Works on all types and sizes of data</li>
@@ -214,12 +212,12 @@ $(document).ready(function () {
 <div id="create-a-new-project" class="section level2">
 <h2>Create a new project</h2>
 <ul>
-<li>Under the File menu &gt; New Project &gt; Existing directory &gt; <em>Browse for the folder where you saved the data</em> &gt; Create project (This is now our working directory)</li>
-<li>It’s good practice to keep all related data, analysis, and text in the same folder in order to use relative paths as opposed to the full path to the file’s location. Another best practice is to create a separate folders for your data, data outputs, and figure outputs. So let’s create a folder named data in our working directory and put the data into it and create an empty data_output folder and an empty fig_output folder.</li>
-<li>Create a new file where we will type our scripts. Go to File &gt; New File &gt; R script OR click the plus sign hovering over the white rectangle in the toolbar. Click the save icon on your tooolbar, or, in the menu, File &gt; Save As and save your script as “Intro-R-class-20191209.R”</li>
+<li>In JupyterHub, start a new folder for this tutorial and give it a descriptive name.</li>
+<li>It’s good practice to keep all related data, analysis, and text in the same folder in order to use relative paths as opposed to the full path to the file’s location. Another best practice is to create a separate folders for your data, data outputs, and figure outputs. So let’s create a folder named data in our tutorial folder and upload the sample data into it and create an empty data_output folder and an empty fig_output folder.</li>
+<li>Create a new R notebook and rename it using a descriptive file name such as "Intro_R_class_20200311”</li>
 </ul>
-<p>Start by giving our document a title using a comment which are denoted by a #</p>
-<pre class="r"><code>#Introduction to R and RStudio Class December 9, 2019
+<p>Start by giving our notebook a title using a comment which are denoted by a #</p>
+<pre class="r"><code>#Introduction to R and RStudio Class March, 2020
 #Instructor: Tess Grynoch
 #Notes by Name
 
@@ -343,6 +341,7 @@ print(c('Solution A is',z,'times as strong as solution B'))</code></pre>
 </div>
 <div id="install-packages-and-add-libraries" class="section level3">
 <h3>Install packages and add libraries</h3>
+<p><strong>Note for RDM 102:</strong> The Tidyverse package has already been installed on the JupyterHub server so we do not need to install it. The following instructions are here for your interest.</p>
 <p>To expand on what is already available through RStudio, we need to install packages. Today we’ll be using tidyverse which is a collection of R packages for data science. For more information on the packages, visit the <a href="https://www.tidyverse.org/">tidyverse website</a>.</p>
 <pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
 <p>Once we install the package, we need to tell it which libraries we will be using</p>
@@ -370,15 +369,6 @@ print(c('Solution A is',z,'times as strong as solution B'))</code></pre>
 <p>To use data in R and RStudio we must first read it into the environment and assign it a variable name.</p>
 <pre class="r"><code>sample &lt;- read.csv(&quot;data/sample.csv&quot;)</code></pre>
 <p>I’ve used the relative path to the file above but if I were to use the full destination name it would look something like “C://Users/grynochc/Desktop/Intro-R-class-20191209/Data/sample.csv”   You can read other files into R using similar functions such as:</p>
-<pre class="r"><code>#Excel files
-library(readxl)
-read_xlsx
-
-#SAS, SPSS, STATA files
-library(haven)
-read_sas() 
-read_spss()
-read_stata()</code></pre>
 </div>
 <div id="data-exploration-and-exploratory-statistics" class="section level3">
 <h3>Data exploration and exploratory statistics</h3>
@@ -584,13 +574,8 @@ summary(sample$Gender)</code></pre>
 <h2>Further resources for learning R</h2>
 <ul>
 <li><a href="https://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham &amp; Garrett Grolemund</li>
-<li><a href="https://bootstrappers.umassmed.edu/bootstrappers-courses/courses/rCourse/index.html">UMMS Bootstrappers R Course</a> by Nick Hathaway</li>
 <li><a href="https://software-carpentry.org/lessons/">Software Carpentry Lessons</a></li>
 <li><a href="https://datacarpentry.org/lessons/">Data Carpentry Lessons</a></li>
-<li><a href="https://library.umassmed.edu/node/97">Sage Research Methods R Tutorials</a>. There are two video series in particular and I’ve linked the first video from each series
-<ul>
-<li><a href="https://methods.sagepub.com/video/introduction-to-rstudio-installing-r-on-windows?seq=1">Practical Data Management with R</a></li>
-<li><a href="https://methods.sagepub.com/video/introduction-to-r?seq=1">Introduction to Data Science with R</a></li>
 </ul></li>
 </ul>
 <p> <br />
